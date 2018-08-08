@@ -6,14 +6,32 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		C86D0968211BAA940005517B /* UniversalIcons8 */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C86D0969211BAA940005517B /* Build configuration list for PBXAggregateTarget "UniversalIcons8" */;
+			buildPhases = (
+				C86D096C211BAAAC0005517B /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalIcons8;
+			productName = UniversalIcons8;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		C86D0955211B9EB10005517B /* icons8.h in Headers */ = {isa = PBXBuildFile; fileRef = C86D0953211B9EB10005517B /* icons8.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C86D095C211B9EC80005517B /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D095B211B9EC80005517B /* Icons.swift */; };
+		C86D095E211BA3750005517B /* IconAssest.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C86D095D211BA3750005517B /* IconAssest.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C86D0950211B9EB10005517B /* icons8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = icons8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86D0953211B9EB10005517B /* icons8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = icons8.h; sourceTree = "<group>"; };
 		C86D0954211B9EB10005517B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C86D095B211B9EC80005517B /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		C86D095D211BA3750005517B /* IconAssest.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = IconAssest.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +66,8 @@
 			children = (
 				C86D0953211B9EB10005517B /* icons8.h */,
 				C86D0954211B9EB10005517B /* Info.plist */,
+				C86D095B211B9EC80005517B /* Icons.swift */,
+				C86D095D211BA3750005517B /* IconAssest.xcassets */,
 			);
 			path = icons8;
 			sourceTree = "<group>";
@@ -95,6 +115,10 @@
 				TargetAttributes = {
 					C86D094F211B9EB10005517B = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
+					};
+					C86D0968211BAA940005517B = {
+						CreatedOnToolsVersion = 9.4;
 					};
 				};
 			};
@@ -111,6 +135,7 @@
 			projectRoot = "";
 			targets = (
 				C86D094F211B9EB10005517B /* icons8 */,
+				C86D0968211BAA940005517B /* UniversalIcons8 */,
 			);
 		};
 /* End PBXProject section */
@@ -120,16 +145,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C86D095E211BA3750005517B /* IconAssest.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C86D096C211BAAAC0005517B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"icons8\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"icons8\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/icons8.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/icons8.framework/Modules/icons8.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/icons8.framework/Modules/icons8.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/icons8.framework/icons8\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/icons8.framework/icons8\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/icons8.framework/icons8\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/icons8.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C86D094B211B9EB10005517B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C86D095C211B9EC80005517B /* Icons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +302,7 @@
 		C86D0959211B9EB10005517B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -273,9 +317,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoecarver.icons8;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +330,7 @@
 		C86D095A211B9EB10005517B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -306,6 +353,24 @@
 			};
 			name = Release;
 		};
+		C86D096A211BAA940005517B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94XXNBEG28;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C86D096B211BAA940005517B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94XXNBEG28;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +388,15 @@
 			buildConfigurations = (
 				C86D0959211B9EB10005517B /* Debug */,
 				C86D095A211B9EB10005517B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C86D0969211BAA940005517B /* Build configuration list for PBXAggregateTarget "UniversalIcons8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C86D096A211BAA940005517B /* Debug */,
+				C86D096B211BAA940005517B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
