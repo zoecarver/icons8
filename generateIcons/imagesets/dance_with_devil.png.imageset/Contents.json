@@ -1,0 +1,23 @@
+  {
+    "images" : [
+      {
+        "idiom" : "universal",
+        "filename" : "dance_with_devil.png.png",
+        "scale" : "1x"
+      },
+      {
+        "idiom" : "universal",
+        "filename" : "dance_with_devil.png@2x.png",
+        "scale" : "2x"
+      },
+      {
+        "idiom" : "universal",
+        "filename" : "dance_with_devil.png@3x.png",
+        "scale" : "3x"
+      }
+    ],
+    "info" : {
+      "version" : 1,
+      "author" : "xcode"
+    }
+  }

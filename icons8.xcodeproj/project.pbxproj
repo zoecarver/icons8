@@ -23,7 +23,7 @@
 /* Begin PBXBuildFile section */
 		C86D0955211B9EB10005517B /* icons8.h in Headers */ = {isa = PBXBuildFile; fileRef = C86D0953211B9EB10005517B /* icons8.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C86D095C211B9EC80005517B /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D095B211B9EC80005517B /* Icons.swift */; };
-		C86D095E211BA3750005517B /* IconAssest.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C86D095D211BA3750005517B /* IconAssest.xcassets */; };
+		C86D7E46211CC7C900BB1D43 /* Assets.car in Resources */ = {isa = PBXBuildFile; fileRef = C86D7E45211CC7C900BB1D43 /* Assets.car */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +32,7 @@
 		C86D0954211B9EB10005517B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C86D095B211B9EC80005517B /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		C86D095D211BA3750005517B /* IconAssest.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = IconAssest.xcassets; sourceTree = "<group>"; };
+		C86D7E45211CC7C900BB1D43 /* Assets.car */ = {isa = PBXFileReference; lastKnownFileType = file; name = Assets.car; path = assets/Assets.car; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +49,7 @@
 		C86D0946211B9EB10005517B = {
 			isa = PBXGroup;
 			children = (
+				C86D7E45211CC7C900BB1D43 /* Assets.car */,
 				C86D0952211B9EB10005517B /* icons8 */,
 				C86D0951211B9EB10005517B /* Products */,
 			);
@@ -145,7 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C86D095E211BA3750005517B /* IconAssest.xcassets in Resources */,
+				C86D7E46211CC7C900BB1D43 /* Assets.car in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

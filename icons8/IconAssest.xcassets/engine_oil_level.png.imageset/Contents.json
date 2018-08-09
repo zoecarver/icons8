@@ -1,0 +1,23 @@
+      {
+        "images" : [
+          {
+            "idiom" : "universal",
+            "filename" : "engine_oil_level.png.png",
+            "scale" : "1x"
+          },
+          {
+            "idiom" : "universal",
+            "filename" : "engine_oil_level.png@2x.png",
+            "scale" : "2x"
+          },
+          {
+            "idiom" : "universal",
+            "filename" : "engine_oil_level.png@3x.png",
+            "scale" : "3x"
+          }
+        ],
+        "info" : {
+          "version" : 1,
+          "author" : "xcode"
+        }
+      }

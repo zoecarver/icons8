@@ -1,0 +1,23 @@
+  {
+    "images" : [
+      {
+        "idiom" : "universal",
+        "filename" : "saddle_stitched_booklet.png.png",
+        "scale" : "1x"
+      },
+      {
+        "idiom" : "universal",
+        "filename" : "saddle_stitched_booklet.png@2x.png",
+        "scale" : "2x"
+      },
+      {
+        "idiom" : "universal",
+        "filename" : "saddle_stitched_booklet.png@3x.png",
+        "scale" : "3x"
+      }
+    ],
+    "info" : {
+      "version" : 1,
+      "author" : "xcode"
+    }
+  }
