@@ -1,5 +1,4 @@
 # icons8 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
----
 This is an *unnoficial* framework to help make it easy to add icons to your app.
 
 ### install
@@ -16,7 +15,7 @@ import icons8
 
 icon(named: .camera) // -> UIImage
 ```
-You can brows the list of icons [here](https://icons8.com/ios)
+You can brows the list of 12708 icons [here](https://icons8.com/ios-icons/)
 
 ### IMPORTANT
 
