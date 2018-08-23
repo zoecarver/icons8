@@ -21,12 +21,22 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		C8008ACE212F190800CA14B1 /* icons8_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = C8008AC0212F190700CA14B1 /* icons8_mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8008AD6212F194600CA14B1 /* IconsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8008AD5212F194600CA14B1 /* IconsEnum.swift */; };
+		C82AFD20212F1B320085C3E7 /* IconsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8008AD5212F194600CA14B1 /* IconsEnum.swift */; };
+		C82AFD22212F1B3F0085C3E7 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82AFD21212F1B3F0085C3E7 /* Icons.swift */; };
 		C86D0955211B9EB10005517B /* icons8.h in Headers */ = {isa = PBXBuildFile; fileRef = C86D0953211B9EB10005517B /* icons8.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C86D095C211B9EC80005517B /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D095B211B9EC80005517B /* Icons.swift */; };
 		C86D7E46211CC7C900BB1D43 /* Assets.car in Resources */ = {isa = PBXBuildFile; fileRef = C86D7E45211CC7C900BB1D43 /* Assets.car */; };
+		C86DF35E212F1BC9006C70C7 /* Assets.car in Resources */ = {isa = PBXBuildFile; fileRef = C86D7E45211CC7C900BB1D43 /* Assets.car */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C8008ABE212F190700CA14B1 /* icons8_mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = icons8_mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8008AC0212F190700CA14B1 /* icons8_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = icons8_mac.h; sourceTree = "<group>"; };
+		C8008AC1212F190700CA14B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8008AD5212F194600CA14B1 /* IconsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsEnum.swift; sourceTree = "<group>"; };
+		C82AFD21212F1B3F0085C3E7 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		C86D0950211B9EB10005517B /* icons8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = icons8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86D0953211B9EB10005517B /* icons8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = icons8.h; sourceTree = "<group>"; };
 		C86D0954211B9EB10005517B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +46,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C8008ABA212F190700CA14B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C86D094C211B9EB10005517B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,11 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C8008ABF212F190700CA14B1 /* icons8-mac */ = {
+			isa = PBXGroup;
+			children = (
+				C8008AC0212F190700CA14B1 /* icons8_mac.h */,
+				C8008AC1212F190700CA14B1 /* Info.plist */,
+				C82AFD21212F1B3F0085C3E7 /* Icons.swift */,
+			);
+			path = "icons8-mac";
+			sourceTree = "<group>";
+		};
 		C86D0946211B9EB10005517B = {
 			isa = PBXGroup;
 			children = (
 				C86D7E45211CC7C900BB1D43 /* Assets.car */,
 				C86D0952211B9EB10005517B /* icons8 */,
+				C8008ABF212F190700CA14B1 /* icons8-mac */,
 				C86D0951211B9EB10005517B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				C86D0950211B9EB10005517B /* icons8.framework */,
+				C8008ABE212F190700CA14B1 /* icons8_mac.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +99,7 @@
 				C86D0954211B9EB10005517B /* Info.plist */,
 				C86D095B211B9EC80005517B /* Icons.swift */,
 				C86D095D211BA3750005517B /* IconAssest.xcassets */,
+				C8008AD5212F194600CA14B1 /* IconsEnum.swift */,
 			);
 			path = icons8;
 			sourceTree = "<group>";
@@ -77,6 +107,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		C8008ABB212F190700CA14B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8008ACE212F190800CA14B1 /* icons8_mac.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C86D094D211B9EB10005517B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,6 +126,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C8008ABD212F190700CA14B1 /* icons8-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8008AD3212F190800CA14B1 /* Build configuration list for PBXNativeTarget "icons8-mac" */;
+			buildPhases = (
+				C8008AB9212F190700CA14B1 /* Sources */,
+				C8008ABA212F190700CA14B1 /* Frameworks */,
+				C8008ABB212F190700CA14B1 /* Headers */,
+				C8008ABC212F190700CA14B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "icons8-mac";
+			productName = "icons8-mac";
+			productReference = C8008ABE212F190700CA14B1 /* icons8_mac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		C86D094F211B9EB10005517B /* icons8 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C86D0958211B9EB10005517B /* Build configuration list for PBXNativeTarget "icons8" */;
@@ -112,9 +168,13 @@
 		C86D0947211B9EB10005517B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Zoe IAMZOE.io";
 				TargetAttributes = {
+					C8008ABD212F190700CA14B1 = {
+						CreatedOnToolsVersion = 9.4;
+					};
 					C86D094F211B9EB10005517B = {
 						CreatedOnToolsVersion = 9.4;
 						LastSwiftMigration = 0940;
@@ -138,11 +198,20 @@
 			targets = (
 				C86D094F211B9EB10005517B /* icons8 */,
 				C86D0968211BAA940005517B /* UniversalIcons8 */,
+				C8008ABD212F190700CA14B1 /* icons8-mac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C8008ABC212F190700CA14B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C86DF35E212F1BC9006C70C7 /* Assets.car in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C86D094E211B9EB10005517B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,17 +239,81 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C8008AB9212F190700CA14B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C82AFD22212F1B3F0085C3E7 /* Icons.swift in Sources */,
+				C82AFD20212F1B320085C3E7 /* IconsEnum.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C86D094B211B9EB10005517B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C86D095C211B9EC80005517B /* Icons.swift in Sources */,
+				C8008AD6212F194600CA14B1 /* IconsEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		C8008ACF212F190800CA14B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "icons8-mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoecarver.icons8-mac";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C8008AD0212F190800CA14B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "icons8-mac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoecarver.icons8-mac";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		C86D0956211B9EB10005517B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -376,6 +509,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C8008AD3212F190800CA14B1 /* Build configuration list for PBXNativeTarget "icons8-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8008ACF212F190800CA14B1 /* Debug */,
+				C8008AD0212F190800CA14B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C86D094A211B9EB10005517B /* Build configuration list for PBXProject "icons8" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
