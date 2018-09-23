@@ -5,7 +5,7 @@ This is an *unnoficial* framework to help make it easy to add icons to your app.
 
 You can use carthage to install this framework:
 ```
-github "pudility/icons8"
+github "zoecarver/icons8"
 ```
 
 ### usage
