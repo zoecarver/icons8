@@ -15,7 +15,7 @@ import icons8
 
 icon(named: .camera) // -> UIImage
 ```
-You can brows the list of 12708 icons [here](https://icons8.com/ios-icons/)
+You can browse the list of 12708 icons [here](https://icons8.com/ios-icons/)
 
 ### IMPORTANT
 
